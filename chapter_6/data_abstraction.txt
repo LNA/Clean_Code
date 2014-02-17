@@ -1,0 +1,14 @@
+  1. Data Abstraction
+  Its good to hide implementation and bad to expose it.  Rather or not implementation is exposed or hidden has to to with access and how we can control it.  Uncle Bob starts the chapter by giving us two code examples; one being a class and the other being an interface.  The class exposes its own implementation while the interface hides it.  
+  
+  There is no Ruby equivalent to an interface.  I see people try to justify swapping out an interface for a module in examples that require them.  However modules don't have contracts to a class stating that any class that uses it must define all methods declared in it.  Ruby class does not have to use every method within a module. In a static langue any class that has an interface must declare and use all methods within that interface. In a static language we can modify an implementation, through the interface, without having an impact on the class. We are separating the things that change from the things that must stay the same through abstraction.
+  
+  Uncle Bob goes on to say that "Hiding Implementation is not just a matter of putting a layer of functions between the variables.  Hiding implementations is about abstractions!"  Abstractions give us a way to extend behavior instead of modifying it, reduce complexity and support polymorphism.
+  
+  2. Data/Object Anti-Symmetry
+  In this section, Uncle Bob talks about the difference between objects and data structures.  Objects expose their functions; data structures expose their data .  Objects hide their data behind abstractions; data structures have no meaningful functions.  Data structures have no behavior; Objects expose their behavior. In object oriented programming  when we add a new function to a class, the class changes. Add new classes to object oriented code and the existing functions stay the same. Data structures and objects are polar opposites. 
+  
+  3. The Law of Demeter
+  States that an object should not know about the inner workings of an object that it manipulates.  It reinforces the idea of objects hide their data.  It also states that a method should only call the methods of that class that it is in, an object created by that method, an object passes as an argument of that class or an object held in an instance variable of the class it resides in.
+  
+  A simple way to thing of the Law of Demeter : only talk to its neighbors or only use one dot. The use only one dot rule applies to Ruby; two dots is a sign that we are calling objects of an object returned by another method. foo.method is good; foo.bar.method is a code smell.
