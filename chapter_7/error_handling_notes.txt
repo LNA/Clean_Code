@@ -1,0 +1,19 @@
+1. Using Exceptions Rather Than Return Codes:
+  Its better to throw an error than catch an exception.  Throwing an error means passing it off to a higher function in the call stack that can handle it.  To do so, it has to include the throw statement in the method.  Catching an exception involves having the code to check for errors within the caller, making your code bulky and giving it an aditional responsibility.
+   
+2. Write Your Try Catch Finally Statement First:
+  Try Catch Finally is a way to respond to an error by putting the code in which the error occurs in into a block and responding to it directly.  If the try code block throws an error it is not passes off to a higher function.  It is passed to the catch block and then to the finally block. Uncle Bob suggests writing tests that force exceptions, then add behavior to your handler to make those tests pass.  
+  
+3. Use Unchecked Exceptions
+  Checked exceptions violate the open closed principle and aren't necessary to write clean code.  They don't exist in Ruby.
+  
+4. Provide Context
+  Each error should tell you the errors source and location.
+  
+5. Define Exception Classes in Terms of a Caller's needs
+  The most important concern is how the exceptions are caught.  Don't refactor exception code until you know that it is doing its job.  Third party API's should be wrapped in order to minimalize the dependencies on them.  Wrapping an API also means that we are not tied to a vendors design choices.
+  
+6. Define the Normal Flow/Don't Define Null/Don't Pass Null
+  Its important to have separation between business logic and error handling. Defining and passing null is bad as each is a way to "invite errors".  
+
+  
