@@ -27,6 +27,8 @@ describe 'LogTest' do
   end
 end
 
+# I'm assuming the logger class would look something like this:
+
 class Logger
   def self.get_logger
   end
@@ -39,6 +41,4 @@ class Logger
 
   def self.remove_all_appenders
   end
-
-  # additional methods methods
 end
