@@ -10,5 +10,17 @@ describe "EnvironmentController" do
 
     hw.get_state.should == "HBchl"
   end
+
+  it "turns on hi temp alarm at threshold" do
+    way_too_hot
+
+    hw.get_state.should == "hBCHl"
+  end
+
+  it " turns on lo temp alarm at threshold" do
+    way_too_cold
+
+    hw.get_state.should == "HBchL"
+  end
 end
 
