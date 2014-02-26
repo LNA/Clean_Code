@@ -1,7 +1,7 @@
 describe "SerializedPageResponder" do 
   it "get page hierarchy as xml" do 
     given_pages("PageOne", "PageOne.ChildOne", "PageTwo")
-    request_is_issued("root", "type:pages")
+    request_is_issued("root", "type:pages")# Notice the formatting.  There is a space between the set up and the assertion.
 
     response.should == XML
   end
