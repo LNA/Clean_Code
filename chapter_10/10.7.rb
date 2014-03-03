@@ -44,7 +44,6 @@ class RowColumnPagePrinter
   end
 
   def print_row(first_index_in_row, last_index_on_page, data)
-
     while column < columns_per_page
       index = first_index_in_row + column * rows_per_page if index <= last_index_on_page
       p "%10d"
@@ -61,10 +60,3 @@ class RowColumnPagePrinter
     self.print_stream
   end
 end
-
-
-
-
-
-
-
