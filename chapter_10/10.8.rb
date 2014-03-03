@@ -41,7 +41,7 @@ class PrimeGenerator
 
   def is_not_multiple_of_any_previous_prime_factor(candidate)
     if is_multiple_of_any_previous_prime_factor(candidate)
-      return false
+      false
     else
       true
     end
