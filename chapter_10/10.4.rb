@@ -11,7 +11,7 @@ class Stack
   end
 
   def push(element)
-    @lements << @top_of_stack
+    @elements << @top_of_stack
   end
 
   def pop
@@ -20,3 +20,4 @@ class Stack
     end
     @elements = @elements[0..-2]
   end
+end
