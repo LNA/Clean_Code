@@ -11,7 +11,7 @@ class PrimeGenerator
   end
 
   def set_two_as_first_prime
-    primes[0] = 2 
+    primes << 2
     multiples_of_prime_factors << 2
   end
 
