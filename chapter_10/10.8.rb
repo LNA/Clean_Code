@@ -40,7 +40,8 @@ class PrimeGenerator
   end
 
   def is_not_multiple_of_any_previous_prime_factor(candidate)
-    if is_multiple_of_any_previous_prime_factor(candidate)
+    multiples_of_prime_factors.each do |multiple|
+    if is_multiple_of_any_previous_prime_factor(multiple)
       false
     else
       true
