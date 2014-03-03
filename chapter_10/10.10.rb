@@ -8,8 +8,7 @@ class CreateSql
 end
 
 class SelectSQL
-    include Sql
-  end
+  include Sql
 end
 
 class InsertSql
@@ -37,5 +36,3 @@ end
 
 class ColumnList
 end
-  
-
