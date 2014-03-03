@@ -19,7 +19,7 @@ class PrimeGenerator
     prime_index = 3
 
     while prime_index < primes.length
-      if is_prime(candidate) == true
+      if is_prime(candidate) 
         primes[index + 1] = candidate
       end
     end
